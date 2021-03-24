@@ -106,9 +106,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a12f35f9d5ab25cecf669c2782c7e7fce"><td class="memItemLeft" align="right" valign="top"><a id="a12f35f9d5ab25cecf669c2782c7e7fce"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>MultigridPreconditionerBase</b> (MPI_Comm const &amp;comm)</td></tr>
 <tr class="separator:a12f35f9d5ab25cecf669c2782c7e7fce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47bbdec0a4d874071f6ba86275a9e62a"><td class="memItemLeft" align="right" valign="top"><a id="a47bbdec0a4d874071f6ba86275a9e62a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>initialize</b> (<a class="el" href="structExaDG_1_1MultigridData.html">MultigridData</a> const &amp;data, parallel::TriangulationBase&lt; dim &gt; const *tria, FiniteElement&lt; dim &gt; const &amp;fe, Mapping&lt; dim &gt; const &amp;mapping, bool const operator_is_singular=false, Map const *dirichlet_bc=nullptr, PeriodicFacePairs *periodic_face_pairs=nullptr)</td></tr>
-<tr class="separator:a47bbdec0a4d874071f6ba86275a9e62a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7ae9f1d980983273b16762f2d1d14a2"><td class="memItemLeft" align="right" valign="top"><a id="af7ae9f1d980983273b16762f2d1d14a2"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>initialize</b> (<a class="el" href="structExaDG_1_1MultigridData.html">MultigridData</a> const &amp;data, Triangulation&lt; dim &gt; const *tria, FiniteElement&lt; dim &gt; const &amp;fe, std::shared_ptr&lt; Mapping&lt; dim &gt; const &gt; mapping, bool const operator_is_singular=false, Map const *dirichlet_bc=nullptr, PeriodicFacePairs *periodic_face_pairs=nullptr)</td></tr>
+<tr class="separator:af7ae9f1d980983273b16762f2d1d14a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01f4c839b9f400f94ea99d1686eba171"><td class="memItemLeft" align="right" valign="top"><a id="a01f4c839b9f400f94ea99d1686eba171"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>vmult</b> (VectorType &amp;dst, VectorType const &amp;src) const</td></tr>
 <tr class="separator:a01f4c839b9f400f94ea99d1686eba171"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -139,6 +139,9 @@ typedef LinearAlgebra::distributed::Vector&lt; MultigridNumber &gt;&#160;</td><t
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:ac1313f6ddb5bd31cc89bcdf3a52a9ac8"><td class="memItemLeft" align="right" valign="top"><a id="ac1313f6ddb5bd31cc89bcdf3a52a9ac8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_mapping</b> ()</td></tr>
+<tr class="separator:ac1313f6ddb5bd31cc89bcdf3a52a9ac8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add57813200587f248d9e8ef37bc6ab88"><td class="memItemLeft" align="right" valign="top"><a id="add57813200587f248d9e8ef37bc6ab88"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_matrix_free</b> ()</td></tr>
 <tr class="separator:add57813200587f248d9e8ef37bc6ab88"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -154,15 +157,18 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>update_smooth
 <tr class="memitem:aa44a1aa1231541c02a56da1937f3ff6c"><td class="memItemLeft" align="right" valign="top"><a id="aa44a1aa1231541c02a56da1937f3ff6c"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>update_coarse_solver</b> (bool const operator_is_singular)</td></tr>
 <tr class="separator:aa44a1aa1231541c02a56da1937f3ff6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac87c30e036b3783219a2f657e2aee270"><td class="memItemLeft" align="right" valign="top"><a id="ac87c30e036b3783219a2f657e2aee270"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_dof_handler_and_constraints</b> (bool is_singular, PeriodicFacePairs *periodic_face_pairs, FiniteElement&lt; dim &gt; const &amp;fe, parallel::TriangulationBase&lt; dim &gt; const *tria, Map const *dirichlet_bc)</td></tr>
-<tr class="separator:ac87c30e036b3783219a2f657e2aee270"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7d7b9e3694ae714ac36aa0469a49e5f"><td class="memItemLeft" align="right" valign="top"><a id="ae7d7b9e3694ae714ac36aa0469a49e5f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>do_initialize_dof_handler_and_constraints</b> (bool is_singular, PeriodicFacePairs &amp;periodic_face_pairs, FiniteElement&lt; dim &gt; const &amp;fe, parallel::TriangulationBase&lt; dim &gt; const *tria, Map const &amp;dirichlet_bc, std::vector&lt; <a class="el" href="structExaDG_1_1MGLevelInfo.html">MGLevelInfo</a> &gt; &amp;level_info, std::vector&lt; <a class="el" href="structExaDG_1_1MGDoFHandlerIdentifier.html">MGDoFHandlerIdentifier</a> &gt; &amp;p_levels, MGLevelObject&lt; std::shared_ptr&lt; DoFHandler&lt; dim &gt; const &gt;&gt; &amp;dofhandlers, MGLevelObject&lt; std::shared_ptr&lt; MGConstrainedDoFs &gt;&gt; &amp;constrained_dofs, MGLevelObject&lt; std::shared_ptr&lt; AffineConstraints&lt; MultigridNumber &gt;&gt;&gt; &amp;constraints)</td></tr>
-<tr class="separator:ae7d7b9e3694ae714ac36aa0469a49e5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78c27d37ed7d468f6bcf52a883f0ac11"><td class="memItemLeft" align="right" valign="top"><a id="a78c27d37ed7d468f6bcf52a883f0ac11"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_dof_handler_and_constraints</b> (bool is_singular, PeriodicFacePairs *periodic_face_pairs, FiniteElement&lt; dim &gt; const &amp;fe, Triangulation&lt; dim &gt; const *tria, Map const *dirichlet_bc)</td></tr>
+<tr class="separator:a78c27d37ed7d468f6bcf52a883f0ac11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa92621ad469505cad693ce3993dc98f"><td class="memItemLeft" align="right" valign="top"><a id="aaa92621ad469505cad693ce3993dc98f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>do_initialize_dof_handler_and_constraints</b> (bool is_singular, PeriodicFacePairs &amp;periodic_face_pairs, FiniteElement&lt; dim &gt; const &amp;fe, Triangulation&lt; dim &gt; const *tria, Map const &amp;dirichlet_bc, std::vector&lt; <a class="el" href="structExaDG_1_1MGLevelInfo.html">MGLevelInfo</a> &gt; &amp;level_info, std::vector&lt; <a class="el" href="structExaDG_1_1MGDoFHandlerIdentifier.html">MGDoFHandlerIdentifier</a> &gt; &amp;p_levels, MGLevelObject&lt; std::shared_ptr&lt; DoFHandler&lt; dim &gt; const &gt;&gt; &amp;dofhandlers, MGLevelObject&lt; std::shared_ptr&lt; MGConstrainedDoFs &gt;&gt; &amp;constrained_dofs, MGLevelObject&lt; std::shared_ptr&lt; AffineConstraints&lt; MultigridNumber &gt;&gt;&gt; &amp;constraints)</td></tr>
+<tr class="separator:aaa92621ad469505cad693ce3993dc98f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d88836617de97be3addf665e2fba802"><td class="memItemLeft" align="right" valign="top"><a id="a7d88836617de97be3addf665e2fba802"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>initialize_transfer_operators</b> ()</td></tr>
 <tr class="separator:a7d88836617de97be3addf665e2fba802"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a916fe05412593a8566cf880727ec9220"><td class="memItemLeft" align="right" valign="top"><a id="a916fe05412593a8566cf880727ec9220"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>do_initialize_transfer_operators</b> (std::shared_ptr&lt; <a class="el" href="classExaDG_1_1MGTransfer.html">MGTransfer</a>&lt; VectorTypeMG &gt;&gt; &amp;transfers, MGLevelObject&lt; std::shared_ptr&lt; AffineConstraints&lt; MultigridNumber &gt;&gt;&gt; &amp;constraints, MGLevelObject&lt; std::shared_ptr&lt; MGConstrainedDoFs &gt;&gt; &amp;constrained_dofs, unsigned int const dof_index)</td></tr>
+<tr class="separator:a916fe05412593a8566cf880727ec9220"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -187,12 +193,6 @@ MGLevelObject&lt; std::shared_ptr&lt; <a class="el" href="classExaDG_1_1Multigri
 <tr class="memitem:a7f2cba5359b0e0288b25f3f3f1277df6"><td class="memItemLeft" align="right" valign="top"><a id="a7f2cba5359b0e0288b25f3f3f1277df6"></a>
 std::shared_ptr&lt; <a class="el" href="classExaDG_1_1MGTransfer.html">MGTransfer</a>&lt; VectorTypeMG &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>transfers</b></td></tr>
 <tr class="separator:a7f2cba5359b0e0288b25f3f3f1277df6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec5eb01f9d49682edd0eb525d188ddb8"><td class="memItemLeft" align="right" valign="top"><a id="aec5eb01f9d49682edd0eb525d188ddb8"></a>
-std::vector&lt; std::shared_ptr&lt; Triangulation&lt; dim &gt; &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>coarse_grid_triangulations</b></td></tr>
-<tr class="separator:aec5eb01f9d49682edd0eb525d188ddb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36c9fbea971daa797faffcce3ab4d9e3"><td class="memItemLeft" align="right" valign="top"><a id="a36c9fbea971daa797faffcce3ab4d9e3"></a>
-Mapping&lt; dim &gt; const  *&#160;</td><td class="memItemRight" valign="bottom"><b>mapping</b></td></tr>
-<tr class="separator:a36c9fbea971daa797faffcce3ab4d9e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad577c30b89f8536ce9a6cf8468121d92"><td class="memItemLeft" align="right" valign="top"><a id="ad577c30b89f8536ce9a6cf8468121d92"></a>
 std::vector&lt; <a class="el" href="structExaDG_1_1MGDoFHandlerIdentifier.html">MGDoFHandlerIdentifier</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>p_levels</b></td></tr>
 <tr class="separator:ad577c30b89f8536ce9a6cf8468121d92"><td class="memSeparator" colspan="2">&#160;</td></tr>

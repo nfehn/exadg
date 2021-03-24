@@ -102,7 +102,7 @@ $(function() {
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;exadg/operators/inverse_mass_operator.h&gt;</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &lt;exadg/operators/mass_operator.h&gt;</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &lt;exadg/solvers_and_preconditioners/newton/newton_solver.h&gt;</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;exadg/solvers_and_preconditioners/preconditioner/preconditioner_base.h&gt;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;exadg/solvers_and_preconditioners/preconditioners/preconditioner_base.h&gt;</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#include &lt;exadg/structure/spatial_discretization/interface.h&gt;</span></div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#include &lt;exadg/structure/spatial_discretization/operators/body_force_operator.h&gt;</span></div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#include &lt;exadg/structure/spatial_discretization/operators/linear_operator.h&gt;</span></div>
@@ -247,8 +247,8 @@ $(function() {
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;  <span class="comment">/*</span></div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="comment">   * Constructor.</span></div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="comment">   */</span></div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  <a class="code" href="classExaDG_1_1Structure_1_1Operator.html">Operator</a>(parallel::TriangulationBase&lt;dim&gt; &amp;             triangulation_in,</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;           Mapping&lt;dim&gt; <span class="keyword">const</span> &amp;                           mapping_in,</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;  <a class="code" href="classExaDG_1_1Structure_1_1Operator.html">Operator</a>(Triangulation&lt;dim&gt; &amp;                           triangulation_in,</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;           std::shared_ptr&lt;Mapping&lt;dim&gt; <span class="keyword">const</span>&gt;            mapping_in,</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;           <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <span class="keyword">const</span> &amp;                           degree_in,</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;           PeriodicFaces <span class="keyword">const</span> &amp;                          periodic_face_pairs_in,</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;           std::shared_ptr&lt;<a class="code" href="structExaDG_1_1Structure_1_1BoundaryDescriptor.html">BoundaryDescriptor&lt;dim&gt;</a>&gt; <span class="keyword">const</span> boundary_descriptor_in,</div>
@@ -427,7 +427,7 @@ $(function() {
 <div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;  <span class="comment">/*</span></div>
 <div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;<span class="comment">   * Mapping</span></div>
 <div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;<span class="comment">   */</span></div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;  Mapping&lt;dim&gt; <span class="keyword">const</span> &amp; mapping;</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;  std::shared_ptr&lt;Mapping&lt;dim&gt; <span class="keyword">const</span>&gt; mapping;</div>
 <div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160; </div>
 <div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;  <span class="comment">/*</span></div>
 <div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;<span class="comment">   * Periodic boundaries.</span></div>
@@ -516,7 +516,7 @@ $(function() {
 <div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;  <span class="comment">/*</span></div>
 <div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;<span class="comment">   * MPI communicator</span></div>
 <div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;<span class="comment">   */</span></div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;  MPI_Comm <span class="keyword">const</span> &amp; mpi_comm;</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;  MPI_Comm <span class="keyword">const</span> mpi_comm;</div>
 <div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160; </div>
 <div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;  <span class="comment">/*</span></div>
 <div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;<span class="comment">   * Output to screen.</span></div>
