@@ -61,22 +61,22 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>ExaDG</b></li><li class="navelem"><a class="el" href="classExaDG_1_1MultigridTimings.html">MultigridTimings</a></li>  </ul>
+<li class="navelem"><b>ExaDG</b></li><li class="navelem"><a class="el" href="classExaDG_1_1PreconditionerBoomerAMG.html">PreconditionerBoomerAMG</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="headertitle">
-<div class="title">ExaDG::MultigridTimings Member List</div>  </div>
+<div class="title">ExaDG::PreconditionerBoomerAMG&lt; Operator, Number &gt; Member List</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>This is the complete list of members for <a class="el" href="classExaDG_1_1MultigridTimings.html">ExaDG::MultigridTimings</a>, including all inherited members.</p>
+<p>This is the complete list of members for <a class="el" href="classExaDG_1_1PreconditionerBoomerAMG.html">ExaDG::PreconditionerBoomerAMG&lt; Operator, Number &gt;</a>, including all inherited members.</p>
 <table class="directory">
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>add</b>(unsigned int const level, std::string const label, double const value) const (defined in <a class="el" href="classExaDG_1_1MultigridTimings.html">ExaDG::MultigridTimings</a>)</td><td class="entry"><a class="el" href="classExaDG_1_1MultigridTimings.html">ExaDG::MultigridTimings</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>init</b>(unsigned int const minlevel, unsigned int const maxlevel) const (defined in <a class="el" href="classExaDG_1_1MultigridTimings.html">ExaDG::MultigridTimings</a>)</td><td class="entry"><a class="el" href="classExaDG_1_1MultigridTimings.html">ExaDG::MultigridTimings</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>MultigridTimings</b>() (defined in <a class="el" href="classExaDG_1_1MultigridTimings.html">ExaDG::MultigridTimings</a>)</td><td class="entry"><a class="el" href="classExaDG_1_1MultigridTimings.html">ExaDG::MultigridTimings</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>print</b>(MPI_Comm const &amp;mpi_comm) const (defined in <a class="el" href="classExaDG_1_1MultigridTimings.html">ExaDG::MultigridTimings</a>)</td><td class="entry"><a class="el" href="classExaDG_1_1MultigridTimings.html">ExaDG::MultigridTimings</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>set</b>(unsigned int const level, std::string const label, double const value) const (defined in <a class="el" href="classExaDG_1_1MultigridTimings.html">ExaDG::MultigridTimings</a>)</td><td class="entry"><a class="el" href="classExaDG_1_1MultigridTimings.html">ExaDG::MultigridTimings</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>get_timings</b>() const (defined in <a class="el" href="classExaDG_1_1PreconditionerBase.html">ExaDG::PreconditionerBase&lt; Number &gt;</a>)</td><td class="entry"><a class="el" href="classExaDG_1_1PreconditionerBase.html">ExaDG::PreconditionerBase&lt; Number &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>PreconditionerBoomerAMG</b>(Operator const &amp;op, AMGData data=AMGData()) (defined in <a class="el" href="classExaDG_1_1PreconditionerBoomerAMG.html">ExaDG::PreconditionerBoomerAMG&lt; Operator, Number &gt;</a>)</td><td class="entry"><a class="el" href="classExaDG_1_1PreconditionerBoomerAMG.html">ExaDG::PreconditionerBoomerAMG&lt; Operator, Number &gt;</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>update</b>() override (defined in <a class="el" href="classExaDG_1_1PreconditionerBoomerAMG.html">ExaDG::PreconditionerBoomerAMG&lt; Operator, Number &gt;</a>)</td><td class="entry"><a class="el" href="classExaDG_1_1PreconditionerBoomerAMG.html">ExaDG::PreconditionerBoomerAMG&lt; Operator, Number &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>vmult</b>(VectorType &amp;dst, VectorType const &amp;src) const override (defined in <a class="el" href="classExaDG_1_1PreconditionerBoomerAMG.html">ExaDG::PreconditionerBoomerAMG&lt; Operator, Number &gt;</a>)</td><td class="entry"><a class="el" href="classExaDG_1_1PreconditionerBoomerAMG.html">ExaDG::PreconditionerBoomerAMG&lt; Operator, Number &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>~PreconditionerBase</b>() (defined in <a class="el" href="classExaDG_1_1PreconditionerBase.html">ExaDG::PreconditionerBase&lt; Number &gt;</a>)</td><td class="entry"><a class="el" href="classExaDG_1_1PreconditionerBase.html">ExaDG::PreconditionerBase&lt; Number &gt;</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
