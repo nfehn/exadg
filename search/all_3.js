@@ -11,8 +11,8 @@ var searchData=
   ['diffusiveoperator_8',['DiffusiveOperator',['../classExaDG_1_1ConvDiff_1_1DiffusiveOperator.html',1,'ExaDG::ConvDiff']]],
   ['diffusiveoperatordata_9',['DiffusiveOperatorData',['../structExaDG_1_1ConvDiff_1_1DiffusiveOperatorData.html',1,'ExaDG::ConvDiff']]],
   ['divergenceandmasserrorcalculator_10',['DivergenceAndMassErrorCalculator',['../classExaDG_1_1IncNS_1_1DivergenceAndMassErrorCalculator.html',1,'ExaDG::IncNS']]],
-  ['divergencecalculator_11',['DivergenceCalculator',['../classExaDG_1_1CompNS_1_1DivergenceCalculator.html',1,'ExaDG::CompNS::DivergenceCalculator&lt; dim, Number &gt;'],['../classExaDG_1_1IncNS_1_1DivergenceCalculator.html',1,'ExaDG::IncNS::DivergenceCalculator&lt; dim, Number &gt;']]],
-  ['divergencecalculator_3c_20dim_2c_20double_20_3e_12',['DivergenceCalculator&lt; dim, double &gt;',['../classExaDG_1_1IncNS_1_1DivergenceCalculator.html',1,'ExaDG::IncNS']]],
+  ['divergencecalculator_11',['DivergenceCalculator',['../classExaDG_1_1DivergenceCalculator.html',1,'ExaDG']]],
+  ['divergencecalculator_3c_20dim_2c_20double_20_3e_12',['DivergenceCalculator&lt; dim, double &gt;',['../classExaDG_1_1DivergenceCalculator.html',1,'ExaDG']]],
   ['divergencekernel_13',['DivergenceKernel',['../classExaDG_1_1IncNS_1_1Operators_1_1DivergenceKernel.html',1,'ExaDG::IncNS::Operators']]],
   ['divergencekernel_3c_20dim_2c_20double_20_3e_14',['DivergenceKernel&lt; dim, double &gt;',['../classExaDG_1_1IncNS_1_1Operators_1_1DivergenceKernel.html',1,'ExaDG::IncNS::Operators']]],
   ['divergenceoperator_15',['DivergenceOperator',['../classExaDG_1_1IncNS_1_1DivergenceOperator.html',1,'ExaDG::IncNS']]],
@@ -31,6 +31,5 @@ var searchData=
   ['driverquasistatic_28',['DriverQuasiStatic',['../classExaDG_1_1Structure_1_1DriverQuasiStatic.html',1,'ExaDG::Structure']]],
   ['driversolid_29',['DriverSolid',['../classExaDG_1_1FSI_1_1preCICE_1_1DriverSolid.html',1,'ExaDG::FSI::preCICE']]],
   ['driversteady_30',['DriverSteady',['../classExaDG_1_1Structure_1_1DriverSteady.html',1,'ExaDG::Structure']]],
-  ['driversteadyproblems_31',['DriverSteadyProblems',['../classExaDG_1_1ConvDiff_1_1DriverSteadyProblems.html',1,'ExaDG::ConvDiff::DriverSteadyProblems&lt; Number &gt;'],['../classExaDG_1_1IncNS_1_1DriverSteadyProblems.html',1,'ExaDG::IncNS::DriverSteadyProblems&lt; dim, Number &gt;']]],
-  ['dynamicconvergencetable_32',['DynamicConvergenceTable',['../classExaDG_1_1DynamicConvergenceTable.html',1,'ExaDG']]]
+  ['driversteadyproblems_31',['DriverSteadyProblems',['../classExaDG_1_1ConvDiff_1_1DriverSteadyProblems.html',1,'ExaDG::ConvDiff::DriverSteadyProblems&lt; Number &gt;'],['../classExaDG_1_1IncNS_1_1DriverSteadyProblems.html',1,'ExaDG::IncNS::DriverSteadyProblems&lt; dim, Number &gt;']]]
 ];
