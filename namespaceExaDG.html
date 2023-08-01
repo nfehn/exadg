@@ -282,8 +282,6 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExaDG_1_1RectangleMeshMovementFunctions.html">RectangleMeshMovementFunctions</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExaDG_1_1ResolutionParameters.html">ResolutionParameters</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExaDG_1_1RestartData.html">RestartData</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExaDG_1_1RHSOperator.html">RHSOperator</a></td></tr>
@@ -307,6 +305,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExaDG_1_1SolverResult.html">SolverResult</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExaDG_1_1SpatialResolutionParameters.html">SpatialResolutionParameters</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structExaDG_1_1SpatialResolutionParametersMinMax.html">SpatialResolutionParametersMinMax</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classExaDG_1_1SSPRK.html">SSPRK</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -388,6 +388,11 @@ Enumerations</h2></td></tr>
 , <b>SineAligned</b>
  }</td></tr>
 <tr class="separator:a5451e905b8e2603a2ba6abd82eb370f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0220f7503db0dc1ae16412d4f21df730"><td class="memItemLeft" align="right" valign="top"><a id="a0220f7503db0dc1ae16412d4f21df730" name="a0220f7503db0dc1ae16412d4f21df730"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><b>RunType</b> { <b>RefineHAndP</b>
+, <b>FixedProblemSize</b>
+, <b>IncreasingProblemSize</b>
+ }</td></tr>
+<tr class="separator:a0220f7503db0dc1ae16412d4f21df730"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6fab1270520863c33fa1d350a87b88bd"><td class="memItemLeft" align="right" valign="top"><a id="a6fab1270520863c33fa1d350a87b88bd" name="a6fab1270520863c33fa1d350a87b88bd"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><b>OperatorType</b> { <b>full</b>
 , <b>homogeneous</b>
 , <b>inhomogeneous</b>
@@ -468,11 +473,6 @@ Enumerations</h2></td></tr>
 , <b>BossakAlpha</b>
  }</td></tr>
 <tr class="separator:ad946c8c4a804195917a455aa4aaf3f15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0220f7503db0dc1ae16412d4f21df730"><td class="memItemLeft" align="right" valign="top"><a id="a0220f7503db0dc1ae16412d4f21df730" name="a0220f7503db0dc1ae16412d4f21df730"></a>enum class &#160;</td><td class="memItemRight" valign="bottom"><b>RunType</b> { <b>RefineHAndP</b>
-, <b>FixedProblemSize</b>
-, <b>IncreasingProblemSize</b>
- }</td></tr>
-<tr class="separator:a0220f7503db0dc1ae16412d4f21df730"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -569,6 +569,9 @@ template&lt;int dim&gt; </td></tr>
 <tr class="memitem:ab4898d48bd5a12243fb8ad2c7ccce491"><td class="memTemplParams" colspan="2">template&lt;int dim, typename Number &gt; </td></tr>
 <tr class="memitem:ab4898d48bd5a12243fb8ad2c7ccce491"><td class="memTemplItemLeft" align="right" valign="top">std::shared_ptr&lt; dealii::Mapping&lt; dim &gt; const &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceExaDG.html#ab4898d48bd5a12243fb8ad2c7ccce491">get_dynamic_mapping</a> (std::shared_ptr&lt; dealii::Mapping&lt; dim &gt; const &gt; static_mapping, std::shared_ptr&lt; <a class="el" href="classExaDG_1_1DeformedMappingBase.html">DeformedMappingBase</a>&lt; dim, Number &gt; const &gt; dynamic_mapping)</td></tr>
 <tr class="separator:ab4898d48bd5a12243fb8ad2c7ccce491"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9171da72c58101e3d2929f4146ac00b"><td class="memTemplParams" colspan="2">template&lt;int dim&gt; </td></tr>
+<tr class="memitem:aa9171da72c58101e3d2929f4146ac00b"><td class="memTemplItemLeft" align="right" valign="top">ElementType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceExaDG.html#aa9171da72c58101e3d2929f4146ac00b">get_element_type</a> (dealii::Triangulation&lt; dim &gt; const &amp;tria)</td></tr>
+<tr class="separator:aa9171da72c58101e3d2929f4146ac00b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11fdfa75b66139f3547f5ed4d7c1ef58"><td class="memTemplParams" colspan="2">template&lt;int dim&gt; </td></tr>
 <tr class="memitem:a11fdfa75b66139f3547f5ed4d7c1ef58"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceExaDG.html#a11fdfa75b66139f3547f5ed4d7c1ef58">create_subdivided_hyper_rectangle</a> (dealii::Triangulation&lt; dim &gt; &amp;tria, std::vector&lt; unsigned int &gt; const &amp;repetitions, dealii::Point&lt; dim &gt; const &amp;p1, dealii::Point&lt; dim &gt; const &amp;p2, ElementType const &amp;element_type, bool const colorize=false)</td></tr>
 <tr class="separator:a11fdfa75b66139f3547f5ed4d7c1ef58"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -597,10 +600,41 @@ template&lt;int dim, typename Number &gt; </td></tr>
 <tr class="memitem:a4ee9607ef908f9a2d5599d52a185abce"><td class="memTemplParams" colspan="2">template&lt;int dim&gt; </td></tr>
 <tr class="memitem:a4ee9607ef908f9a2d5599d52a185abce"><td class="memTemplItemLeft" align="right" valign="top">std::shared_ptr&lt; dealii::FiniteElement&lt; dim &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceExaDG.html#a4ee9607ef908f9a2d5599d52a185abce">create_finite_element</a> (ElementType const &amp;element_type, bool const is_dg, unsigned int const n_components, unsigned int const degree)</td></tr>
 <tr class="separator:a4ee9607ef908f9a2d5599d52a185abce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2e0d5ad04071eb2f8c097d2aaa8e865"><td class="memItemLeft" align="right" valign="top"><a id="aa2e0d5ad04071eb2f8c097d2aaa8e865" name="aa2e0d5ad04071eb2f8c097d2aaa8e865"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>calculate_time_step_max_efficiency</b> (double const h, unsigned int const fe_degree, unsigned int const order_time_integration)</td></tr>
+<tr class="separator:aa2e0d5ad04071eb2f8c097d2aaa8e865"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa8fc855d750bc1b48472daf8ca72c40"><td class="memItemLeft" align="right" valign="top"><a id="afa8fc855d750bc1b48472daf8ca72c40" name="afa8fc855d750bc1b48472daf8ca72c40"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>calculate_const_time_step_diff</b> (double const diffusivity, double const global_min_cell_diameter, unsigned int const fe_degree, double const exponent_fe_degree=3.0)</td></tr>
+<tr class="separator:afa8fc855d750bc1b48472daf8ca72c40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95dacd67f3a192f30786caab268d5f7f"><td class="memTemplParams" colspan="2"><a id="a95dacd67f3a192f30786caab268d5f7f" name="a95dacd67f3a192f30786caab268d5f7f"></a>
+template&lt;int dim&gt; </td></tr>
+<tr class="memitem:a95dacd67f3a192f30786caab268d5f7f"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><b>calculate_max_velocity</b> (dealii::Triangulation&lt; dim &gt; const &amp;triangulation, std::shared_ptr&lt; dealii::Function&lt; dim &gt; &gt; velocity, double const time, MPI_Comm const &amp;mpi_comm)</td></tr>
+<tr class="separator:a95dacd67f3a192f30786caab268d5f7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac6b2afb02ec6e5eef36c3c8641d373c"><td class="memItemLeft" align="right" valign="top"><a id="aac6b2afb02ec6e5eef36c3c8641d373c" name="aac6b2afb02ec6e5eef36c3c8641d373c"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>calculate_time_step_cfl_global</b> (double const max_velocity, double const global_min_cell_diameter, unsigned int const fe_degree, double const exponent_fe_degree=2.0)</td></tr>
+<tr class="separator:aac6b2afb02ec6e5eef36c3c8641d373c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11b5650cf0fbaabdc6892710ce4031dd"><td class="memTemplParams" colspan="2"><a id="a11b5650cf0fbaabdc6892710ce4031dd" name="a11b5650cf0fbaabdc6892710ce4031dd"></a>
+template&lt;int dim, typename value_type &gt; </td></tr>
+<tr class="memitem:a11b5650cf0fbaabdc6892710ce4031dd"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><b>calculate_time_step_cfl_local</b> (dealii::MatrixFree&lt; dim, value_type &gt; const &amp;data, unsigned int const dof_index, unsigned int const quad_index, std::shared_ptr&lt; dealii::Function&lt; dim &gt; &gt; const velocity, double const time, unsigned int const degree, double const exponent_fe_degree, CFLConditionType const cfl_condition_type, MPI_Comm const &amp;mpi_comm)</td></tr>
+<tr class="separator:a11b5650cf0fbaabdc6892710ce4031dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aceed76cec97877ae73a515bc84e93a75"><td class="memTemplParams" colspan="2"><a id="aceed76cec97877ae73a515bc84e93a75" name="aceed76cec97877ae73a515bc84e93a75"></a>
+template&lt;int dim, typename value_type &gt; </td></tr>
+<tr class="memitem:aceed76cec97877ae73a515bc84e93a75"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><b>calculate_time_step_cfl_local</b> (dealii::MatrixFree&lt; dim, value_type &gt; const &amp;data, unsigned int const dof_index, unsigned int const quad_index, dealii::LinearAlgebra::distributed::Vector&lt; value_type &gt; const &amp;velocity, unsigned int const degree, double const exponent_fe_degree, CFLConditionType const cfl_condition_type, MPI_Comm const &amp;mpi_comm)</td></tr>
+<tr class="separator:aceed76cec97877ae73a515bc84e93a75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17c2cbe3dc0f195d47cd7a880a083e2b"><td class="memTemplParams" colspan="2"><a id="a17c2cbe3dc0f195d47cd7a880a083e2b" name="a17c2cbe3dc0f195d47cd7a880a083e2b"></a>
+template&lt;int dim, typename value_type &gt; </td></tr>
+<tr class="memitem:a17c2cbe3dc0f195d47cd7a880a083e2b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>calculate_cfl</b> (dealii::LinearAlgebra::distributed::Vector&lt; value_type &gt; &amp;cfl, dealii::Triangulation&lt; dim &gt; const &amp;triangulation, dealii::MatrixFree&lt; dim, value_type &gt; const &amp;data, unsigned int const dof_index, unsigned int const quad_index, dealii::LinearAlgebra::distributed::Vector&lt; value_type &gt; const &amp;velocity, double const time_step, unsigned int const degree, double const exponent_fe_degree)</td></tr>
+<tr class="separator:a17c2cbe3dc0f195d47cd7a880a083e2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac83db4cf7c0e8b1edc58eaf5e76b00c4"><td class="memItemLeft" align="right" valign="top"><a id="ac83db4cf7c0e8b1edc58eaf5e76b00c4" name="ac83db4cf7c0e8b1edc58eaf5e76b00c4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>fill_resolutions_vector</b> (std::vector&lt; std::tuple&lt; unsigned int, unsigned int, unsigned int &gt; &gt; &amp;resolutions, unsigned int const dim, unsigned int const degree, unsigned int const dofs_per_element, dealii::types::global_dof_index const n_dofs_min, dealii::types::global_dof_index const n_dofs_max, RunType const &amp;run_type)</td></tr>
+<tr class="separator:ac83db4cf7c0e8b1edc58eaf5e76b00c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32fb3bfa0090de5af5646a74c84160ba"><td class="memTemplParams" colspan="2"><a id="a32fb3bfa0090de5af5646a74c84160ba" name="a32fb3bfa0090de5af5646a74c84160ba"></a>
 template&lt;int dim&gt; </td></tr>
 <tr class="memitem:a32fb3bfa0090de5af5646a74c84160ba"><td class="memTemplItemLeft" align="right" valign="top">std::shared_ptr&lt; dealii::Quadrature&lt; dim &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>create_quadrature</b> (ElementType const &amp;element_type, unsigned int const n_q_points_1d)</td></tr>
 <tr class="separator:a32fb3bfa0090de5af5646a74c84160ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b6dd4aa4eacba790a611fde80b852b2"><td class="memItemLeft" align="right" valign="top"><a id="a3b6dd4aa4eacba790a611fde80b852b2" name="a3b6dd4aa4eacba790a611fde80b852b2"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>measure_operator_evaluation_time</b> (std::function&lt; void(void)&gt; const &amp;evaluate_operator, unsigned int const degree, unsigned int const n_repetitions_inner, unsigned int const n_repetitions_outer, MPI_Comm const &amp;mpi_comm)</td></tr>
+<tr class="separator:a3b6dd4aa4eacba790a611fde80b852b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a863d41e9259662d708ccd897be8b6db2"><td class="memTemplParams" colspan="2"><a id="a863d41e9259662d708ccd897be8b6db2" name="a863d41e9259662d708ccd897be8b6db2"></a>
 template&lt;int dim, int n_components, typename Number &gt; </td></tr>
 <tr class="memitem:a863d41e9259662d708ccd897be8b6db2"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>run</b> (std::string const &amp;input_file, MPI_Comm const &amp;mpi_comm)</td></tr>
@@ -633,6 +667,22 @@ template&lt;typename MeshType , typename Number &gt; </td></tr>
 template&lt;int dim, typename VectorType &gt; </td></tr>
 <tr class="memitem:af65e4b10a6fd5e08ab418869da50f720"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>write_output</b> (<a class="el" href="structExaDG_1_1OutputDataBase.html">OutputDataBase</a> const &amp;output_data, dealii::DoFHandler&lt; dim &gt; const &amp;dof_handler, dealii::Mapping&lt; dim &gt; const &amp;mapping, VectorType const &amp;solution_vector, unsigned int const output_counter, MPI_Comm const &amp;mpi_comm)</td></tr>
 <tr class="separator:af65e4b10a6fd5e08ab418869da50f720"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad41d639287c595a07759d9948f9f8993"><td class="memTemplParams" colspan="2"><a id="ad41d639287c595a07759d9948f9f8993" name="ad41d639287c595a07759d9948f9f8993"></a>
+template&lt;int dim, typename Number &gt; </td></tr>
+<tr class="memitem:ad41d639287c595a07759d9948f9f8993"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>my_point_value</b> (dealii::Vector&lt; Number &gt; &amp;result, dealii::Mapping&lt; dim &gt; const &amp;mapping, dealii::DoFHandler&lt; dim &gt; const &amp;dof_handler, dealii::LinearAlgebra::distributed::Vector&lt; Number &gt; const &amp;dof_vector, typename dealii::DoFHandler&lt; dim &gt;::active_cell_iterator const &amp;cell, dealii::Point&lt; dim &gt; const &amp;point_in_ref_coord)</td></tr>
+<tr class="separator:ad41d639287c595a07759d9948f9f8993"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b4f73835958bbb3a0741e20e907e64e"><td class="memTemplParams" colspan="2"><a id="a5b4f73835958bbb3a0741e20e907e64e" name="a5b4f73835958bbb3a0741e20e907e64e"></a>
+template&lt;int dim, typename Number &gt; </td></tr>
+<tr class="memitem:a5b4f73835958bbb3a0741e20e907e64e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>evaluate_scalar_quantity_in_point</b> (Number &amp;solution_value, dealii::DoFHandler&lt; dim &gt; const &amp;dof_handler, dealii::Mapping&lt; dim &gt; const &amp;mapping, dealii::LinearAlgebra::distributed::Vector&lt; Number &gt; const &amp;numerical_solution, dealii::Point&lt; dim &gt; const &amp;point, MPI_Comm const &amp;mpi_comm, double const tolerance=1.e-10)</td></tr>
+<tr class="separator:a5b4f73835958bbb3a0741e20e907e64e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01097b8ac3fb912ea30a9e32686e15f5"><td class="memTemplParams" colspan="2"><a id="a01097b8ac3fb912ea30a9e32686e15f5" name="a01097b8ac3fb912ea30a9e32686e15f5"></a>
+template&lt;int dim, typename Number &gt; </td></tr>
+<tr class="memitem:a01097b8ac3fb912ea30a9e32686e15f5"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>evaluate_vectorial_quantity_in_point</b> (dealii::Tensor&lt; 1, dim, Number &gt; &amp;solution_value, dealii::DoFHandler&lt; dim &gt; const &amp;dof_handler, dealii::Mapping&lt; dim &gt; const &amp;mapping, dealii::LinearAlgebra::distributed::Vector&lt; Number &gt; const &amp;numerical_solution, dealii::Point&lt; dim &gt; const &amp;point, MPI_Comm const &amp;mpi_comm, double const tolerance=1.e-10)</td></tr>
+<tr class="separator:a01097b8ac3fb912ea30a9e32686e15f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1f1888f9192b9bc73c277c78a96e8c3"><td class="memTemplParams" colspan="2"><a id="af1f1888f9192b9bc73c277c78a96e8c3" name="af1f1888f9192b9bc73c277c78a96e8c3"></a>
+template&lt;int dim, typename Number &gt; </td></tr>
+<tr class="memitem:af1f1888f9192b9bc73c277c78a96e8c3"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; std::vector&lt; dealii::types::global_dof_index &gt;, std::vector&lt; Number &gt; &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>get_dof_indices_and_shape_values</b> (std::vector&lt; std::pair&lt; typename dealii::Triangulation&lt; dim &gt;::active_cell_iterator, dealii::Point&lt; dim &gt; &gt; &gt; const &amp;adjacent_cells, dealii::DoFHandler&lt; dim &gt; const &amp;dof_handler, dealii::Mapping&lt; dim &gt; const &amp;mapping, dealii::LinearAlgebra::distributed::Vector&lt; Number &gt; const &amp;solution)</td></tr>
+<tr class="separator:af1f1888f9192b9bc73c277c78a96e8c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c52acdf403e6132b5e31442de966ce3"><td class="memItemLeft" align="right" valign="top"><a id="a7c52acdf403e6132b5e31442de966ce3" name="a7c52acdf403e6132b5e31442de966ce3"></a>
 TimeControlData::UnsteadyEvalType&#160;</td><td class="memItemRight" valign="bottom"><b>get_unsteady_evaluation_type</b> (<a class="el" href="structExaDG_1_1TimeControlData.html">TimeControlData</a> const &amp;data)</td></tr>
 <tr class="separator:a7c52acdf403e6132b5e31442de966ce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -722,38 +772,10 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>adjust_time_step_to
 <tr class="memitem:aa84deaeba572d29b0ae2133dec645b44"><td class="memItemLeft" align="right" valign="top"><a id="aa84deaeba572d29b0ae2133dec645b44" name="aa84deaeba572d29b0ae2133dec645b44"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>calculate_const_time_step</b> (double const dt, unsigned int const n_refine_time)</td></tr>
 <tr class="separator:aa84deaeba572d29b0ae2133dec645b44"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1ac6544d6b281ef8d37e670e50671302"><td class="memItemLeft" align="right" valign="top"><a id="a1ac6544d6b281ef8d37e670e50671302" name="a1ac6544d6b281ef8d37e670e50671302"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>calculate_time_step_max_efficiency</b> (double const global_min_cell_diameter, unsigned int const fe_degree, unsigned int const order_time_integration)</td></tr>
-<tr class="separator:a1ac6544d6b281ef8d37e670e50671302"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95dacd67f3a192f30786caab268d5f7f"><td class="memTemplParams" colspan="2"><a id="a95dacd67f3a192f30786caab268d5f7f" name="a95dacd67f3a192f30786caab268d5f7f"></a>
-template&lt;int dim&gt; </td></tr>
-<tr class="memitem:a95dacd67f3a192f30786caab268d5f7f"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><b>calculate_max_velocity</b> (dealii::Triangulation&lt; dim &gt; const &amp;triangulation, std::shared_ptr&lt; dealii::Function&lt; dim &gt; &gt; velocity, double const time, MPI_Comm const &amp;mpi_comm)</td></tr>
-<tr class="separator:a95dacd67f3a192f30786caab268d5f7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac6b2afb02ec6e5eef36c3c8641d373c"><td class="memItemLeft" align="right" valign="top"><a id="aac6b2afb02ec6e5eef36c3c8641d373c" name="aac6b2afb02ec6e5eef36c3c8641d373c"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>calculate_time_step_cfl_global</b> (double const max_velocity, double const global_min_cell_diameter, unsigned int const fe_degree, double const exponent_fe_degree=2.0)</td></tr>
-<tr class="separator:aac6b2afb02ec6e5eef36c3c8641d373c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afa8fc855d750bc1b48472daf8ca72c40"><td class="memItemLeft" align="right" valign="top"><a id="afa8fc855d750bc1b48472daf8ca72c40" name="afa8fc855d750bc1b48472daf8ca72c40"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>calculate_const_time_step_diff</b> (double const diffusivity, double const global_min_cell_diameter, unsigned int const fe_degree, double const exponent_fe_degree=3.0)</td></tr>
-<tr class="separator:afa8fc855d750bc1b48472daf8ca72c40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a11b5650cf0fbaabdc6892710ce4031dd"><td class="memTemplParams" colspan="2"><a id="a11b5650cf0fbaabdc6892710ce4031dd" name="a11b5650cf0fbaabdc6892710ce4031dd"></a>
-template&lt;int dim, typename value_type &gt; </td></tr>
-<tr class="memitem:a11b5650cf0fbaabdc6892710ce4031dd"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><b>calculate_time_step_cfl_local</b> (dealii::MatrixFree&lt; dim, value_type &gt; const &amp;data, unsigned int const dof_index, unsigned int const quad_index, std::shared_ptr&lt; dealii::Function&lt; dim &gt; &gt; const velocity, double const time, unsigned int const degree, double const exponent_fe_degree, CFLConditionType const cfl_condition_type, MPI_Comm const &amp;mpi_comm)</td></tr>
-<tr class="separator:a11b5650cf0fbaabdc6892710ce4031dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aceed76cec97877ae73a515bc84e93a75"><td class="memTemplParams" colspan="2"><a id="aceed76cec97877ae73a515bc84e93a75" name="aceed76cec97877ae73a515bc84e93a75"></a>
-template&lt;int dim, typename value_type &gt; </td></tr>
-<tr class="memitem:aceed76cec97877ae73a515bc84e93a75"><td class="memTemplItemLeft" align="right" valign="top">double&#160;</td><td class="memTemplItemRight" valign="bottom"><b>calculate_time_step_cfl_local</b> (dealii::MatrixFree&lt; dim, value_type &gt; const &amp;data, unsigned int const dof_index, unsigned int const quad_index, dealii::LinearAlgebra::distributed::Vector&lt; value_type &gt; const &amp;velocity, unsigned int const degree, double const exponent_fe_degree, CFLConditionType const cfl_condition_type, MPI_Comm const &amp;mpi_comm)</td></tr>
-<tr class="separator:aceed76cec97877ae73a515bc84e93a75"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17c2cbe3dc0f195d47cd7a880a083e2b"><td class="memTemplParams" colspan="2"><a id="a17c2cbe3dc0f195d47cd7a880a083e2b" name="a17c2cbe3dc0f195d47cd7a880a083e2b"></a>
-template&lt;int dim, typename value_type &gt; </td></tr>
-<tr class="memitem:a17c2cbe3dc0f195d47cd7a880a083e2b"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>calculate_cfl</b> (dealii::LinearAlgebra::distributed::Vector&lt; value_type &gt; &amp;cfl, dealii::Triangulation&lt; dim &gt; const &amp;triangulation, dealii::MatrixFree&lt; dim, value_type &gt; const &amp;data, unsigned int const dof_index, unsigned int const quad_index, dealii::LinearAlgebra::distributed::Vector&lt; value_type &gt; const &amp;velocity, double const time_step, unsigned int const degree, double const exponent_fe_degree)</td></tr>
-<tr class="separator:a17c2cbe3dc0f195d47cd7a880a083e2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae37213007b3d71515b9d35a598e17e22"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceExaDG.html#ae37213007b3d71515b9d35a598e17e22">create_directories</a> (std::string const &amp;directory, MPI_Comm const &amp;mpi_comm)</td></tr>
 <tr class="separator:ae37213007b3d71515b9d35a598e17e22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fcc0555e145ada7ade65b6ea59edcf7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceExaDG.html#a2fcc0555e145ada7ade65b6ea59edcf7">DeclExceptionMsg</a> (ExcNotImplemented, &quot;You are trying to use functionality in ExaDG that is &quot; &quot;currently not implemented. In many cases, this indicates &quot; &quot;that there simply didn't appear much of a need for it, or &quot; &quot;that the author of the original code did not have the &quot; &quot;time to implement a particular case. If you hit this &quot; &quot;exception, it is therefore worth the time to look into &quot; &quot;the code to find out whether you may be able to &quot; &quot;implement the missing functionality. If you do, please &quot; &quot;consider providing a patch to the ExaDG development &quot; &quot;sources (see the ExaDG Wiki page on how to contribute).&quot;)</td></tr>
 <tr class="separator:a2fcc0555e145ada7ade65b6ea59edcf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac83db4cf7c0e8b1edc58eaf5e76b00c4"><td class="memItemLeft" align="right" valign="top"><a id="ac83db4cf7c0e8b1edc58eaf5e76b00c4" name="ac83db4cf7c0e8b1edc58eaf5e76b00c4"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>fill_resolutions_vector</b> (std::vector&lt; std::tuple&lt; unsigned int, unsigned int, unsigned int &gt; &gt; &amp;resolutions, unsigned int const dim, unsigned int const degree, unsigned int const dofs_per_element, dealii::types::global_dof_index const n_dofs_min, dealii::types::global_dof_index const n_dofs_max, RunType const &amp;run_type)</td></tr>
-<tr class="separator:ac83db4cf7c0e8b1edc58eaf5e76b00c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73c483ba4be3aa1154ad102a8cec57c8"><td class="memItemLeft" align="right" valign="top"><a id="a73c483ba4be3aa1154ad102a8cec57c8" name="a73c483ba4be3aa1154ad102a8cec57c8"></a>
 std::tuple&lt; bool, unsigned int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>identify_first_process_on_node</b> (MPI_Comm const &amp;mpi_comm)</td></tr>
 <tr class="separator:a73c483ba4be3aa1154ad102a8cec57c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -868,25 +890,6 @@ template&lt;int rank, int dim&gt; </td></tr>
 template&lt;int n_components, int dim&gt; </td></tr>
 <tr class="memitem:a3e39fa37be04bf37faa7b4f82d1c60bb"><td class="memTemplItemLeft" align="right" valign="top">constexpr unsigned int&#160;</td><td class="memTemplItemRight" valign="bottom"><b>n_components_to_rank</b> ()</td></tr>
 <tr class="separator:a3e39fa37be04bf37faa7b4f82d1c60bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b6dd4aa4eacba790a611fde80b852b2"><td class="memItemLeft" align="right" valign="top"><a id="a3b6dd4aa4eacba790a611fde80b852b2" name="a3b6dd4aa4eacba790a611fde80b852b2"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>measure_operator_evaluation_time</b> (std::function&lt; void(void)&gt; const &amp;evaluate_operator, unsigned int const degree, unsigned int const n_repetitions_inner, unsigned int const n_repetitions_outer, MPI_Comm const &amp;mpi_comm)</td></tr>
-<tr class="separator:a3b6dd4aa4eacba790a611fde80b852b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1f1888f9192b9bc73c277c78a96e8c3"><td class="memTemplParams" colspan="2"><a id="af1f1888f9192b9bc73c277c78a96e8c3" name="af1f1888f9192b9bc73c277c78a96e8c3"></a>
-template&lt;int dim, typename Number &gt; </td></tr>
-<tr class="memitem:af1f1888f9192b9bc73c277c78a96e8c3"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; std::pair&lt; std::vector&lt; dealii::types::global_dof_index &gt;, std::vector&lt; Number &gt; &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><b>get_dof_indices_and_shape_values</b> (std::vector&lt; std::pair&lt; typename dealii::Triangulation&lt; dim &gt;::active_cell_iterator, dealii::Point&lt; dim &gt; &gt; &gt; const &amp;adjacent_cells, dealii::DoFHandler&lt; dim &gt; const &amp;dof_handler, dealii::Mapping&lt; dim &gt; const &amp;mapping, dealii::LinearAlgebra::distributed::Vector&lt; Number &gt; const &amp;solution)</td></tr>
-<tr class="separator:af1f1888f9192b9bc73c277c78a96e8c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad41d639287c595a07759d9948f9f8993"><td class="memTemplParams" colspan="2"><a id="ad41d639287c595a07759d9948f9f8993" name="ad41d639287c595a07759d9948f9f8993"></a>
-template&lt;int dim, typename Number &gt; </td></tr>
-<tr class="memitem:ad41d639287c595a07759d9948f9f8993"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>my_point_value</b> (dealii::Vector&lt; Number &gt; &amp;result, dealii::Mapping&lt; dim &gt; const &amp;mapping, dealii::DoFHandler&lt; dim &gt; const &amp;dof_handler, dealii::LinearAlgebra::distributed::Vector&lt; Number &gt; const &amp;dof_vector, typename dealii::DoFHandler&lt; dim &gt;::active_cell_iterator const &amp;cell, dealii::Point&lt; dim &gt; const &amp;point_in_ref_coord)</td></tr>
-<tr class="separator:ad41d639287c595a07759d9948f9f8993"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b4f73835958bbb3a0741e20e907e64e"><td class="memTemplParams" colspan="2"><a id="a5b4f73835958bbb3a0741e20e907e64e" name="a5b4f73835958bbb3a0741e20e907e64e"></a>
-template&lt;int dim, typename Number &gt; </td></tr>
-<tr class="memitem:a5b4f73835958bbb3a0741e20e907e64e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>evaluate_scalar_quantity_in_point</b> (Number &amp;solution_value, dealii::DoFHandler&lt; dim &gt; const &amp;dof_handler, dealii::Mapping&lt; dim &gt; const &amp;mapping, dealii::LinearAlgebra::distributed::Vector&lt; Number &gt; const &amp;numerical_solution, dealii::Point&lt; dim &gt; const &amp;point, MPI_Comm const &amp;mpi_comm, double const tolerance=1.e-10)</td></tr>
-<tr class="separator:a5b4f73835958bbb3a0741e20e907e64e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a01097b8ac3fb912ea30a9e32686e15f5"><td class="memTemplParams" colspan="2"><a id="a01097b8ac3fb912ea30a9e32686e15f5" name="a01097b8ac3fb912ea30a9e32686e15f5"></a>
-template&lt;int dim, typename Number &gt; </td></tr>
-<tr class="memitem:a01097b8ac3fb912ea30a9e32686e15f5"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><b>evaluate_vectorial_quantity_in_point</b> (dealii::Tensor&lt; 1, dim, Number &gt; &amp;solution_value, dealii::DoFHandler&lt; dim &gt; const &amp;dof_handler, dealii::Mapping&lt; dim &gt; const &amp;mapping, dealii::LinearAlgebra::distributed::Vector&lt; Number &gt; const &amp;numerical_solution, dealii::Point&lt; dim &gt; const &amp;point, MPI_Comm const &amp;mpi_comm, double const tolerance=1.e-10)</td></tr>
-<tr class="separator:a01097b8ac3fb912ea30a9e32686e15f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class provides information at which time steps a certain action should be triggered. It is typically used in postprocessing routines that shall not be invoked after every time step. The user can specify an evaluation interval in terms of number of time steps or an amount of time. </p>
@@ -1353,6 +1356,27 @@ template&lt;int dim, typename Number &gt; </div>
       </table>
 </div><div class="memdoc">
 <p>Return pointer to dynamic mapping (and redirect to static mapping if dynamic mapping is not initialized). </p>
+
+</div>
+</div>
+<a id="aa9171da72c58101e3d2929f4146ac00b" name="aa9171da72c58101e3d2929f4146ac00b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9171da72c58101e3d2929f4146ac00b">&#9670;&#160;</a></span>get_element_type()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;int dim&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">ElementType ExaDG::get_element_type </td>
+          <td>(</td>
+          <td class="paramtype">dealii::Triangulation&lt; dim &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>tria</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the type of elements, where we currently only allow triangulations consisting of the same type of elements. </p>
 
 </div>
 </div>

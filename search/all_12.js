@@ -38,13 +38,14 @@ var searchData=
   ['spatialoperatorbase_35',['SpatialOperatorBase',['../classExaDG_1_1IncNS_1_1SpatialOperatorBase.html',1,'ExaDG::IncNS']]],
   ['spatialoperatorbase_3c_20dim_2c_20double_20_3e_36',['SpatialOperatorBase&lt; dim, double &gt;',['../classExaDG_1_1IncNS_1_1SpatialOperatorBase.html',1,'ExaDG::IncNS']]],
   ['spatialresolutionparameters_37',['SpatialResolutionParameters',['../structExaDG_1_1SpatialResolutionParameters.html',1,'ExaDG']]],
-  ['spectralanalysis_38',['SpectralAnalysis',['../classdealspectrum_1_1SpectralAnalysis.html',1,'dealspectrum::SpectralAnalysis'],['../classdealspectrum_1_1SpectralAnalysis.html#a34a974fb314f0807d96902741be6e156',1,'dealspectrum::SpectralAnalysis::SpectralAnalysis()']]],
-  ['ssprk_39',['SSPRK',['../classExaDG_1_1SSPRK.html',1,'ExaDG']]],
-  ['start_40',['start',['../classdealspectrum_1_1DealSpectrumTimer.html#a140b943f9881e4a1d917941f896cb472',1,'dealspectrum::DealSpectrumTimer']]],
-  ['statisticsmanager_41',['StatisticsManager',['../classExaDG_1_1StatisticsManager.html',1,'ExaDG']]],
-  ['stop_42',['stop',['../classdealspectrum_1_1DealSpectrumTimer.html#ac7f6fa0118b49c8c58f1b8357cc2a371',1,'dealspectrum::DealSpectrumTimer']]],
-  ['streamfunctioncalculatorrhsoperator_43',['StreamfunctionCalculatorRHSOperator',['../classExaDG_1_1IncNS_1_1StreamfunctionCalculatorRHSOperator.html',1,'ExaDG::IncNS']]],
-  ['string_5fto_5fenum_44',['string_to_enum',['../namespaceExaDG_1_1Utilities.html#a19aec684f8b02f55a5fc67b5f3484f8a',1,'ExaDG::Utilities']]],
-  ['stvenantkirchhoff_45',['StVenantKirchhoff',['../classExaDG_1_1Structure_1_1StVenantKirchhoff.html',1,'ExaDG::Structure']]],
-  ['stvenantkirchhoffdata_46',['StVenantKirchhoffData',['../structExaDG_1_1Structure_1_1StVenantKirchhoffData.html',1,'ExaDG::Structure']]]
+  ['spatialresolutionparametersminmax_38',['SpatialResolutionParametersMinMax',['../structExaDG_1_1SpatialResolutionParametersMinMax.html',1,'ExaDG']]],
+  ['spectralanalysis_39',['SpectralAnalysis',['../classdealspectrum_1_1SpectralAnalysis.html',1,'dealspectrum::SpectralAnalysis'],['../classdealspectrum_1_1SpectralAnalysis.html#a34a974fb314f0807d96902741be6e156',1,'dealspectrum::SpectralAnalysis::SpectralAnalysis()']]],
+  ['ssprk_40',['SSPRK',['../classExaDG_1_1SSPRK.html',1,'ExaDG']]],
+  ['start_41',['start',['../classdealspectrum_1_1DealSpectrumTimer.html#a140b943f9881e4a1d917941f896cb472',1,'dealspectrum::DealSpectrumTimer']]],
+  ['statisticsmanager_42',['StatisticsManager',['../classExaDG_1_1StatisticsManager.html',1,'ExaDG']]],
+  ['stop_43',['stop',['../classdealspectrum_1_1DealSpectrumTimer.html#ac7f6fa0118b49c8c58f1b8357cc2a371',1,'dealspectrum::DealSpectrumTimer']]],
+  ['streamfunctioncalculatorrhsoperator_44',['StreamfunctionCalculatorRHSOperator',['../classExaDG_1_1IncNS_1_1StreamfunctionCalculatorRHSOperator.html',1,'ExaDG::IncNS']]],
+  ['string_5fto_5fenum_45',['string_to_enum',['../namespaceExaDG_1_1Utilities.html#a19aec684f8b02f55a5fc67b5f3484f8a',1,'ExaDG::Utilities']]],
+  ['stvenantkirchhoff_46',['StVenantKirchhoff',['../classExaDG_1_1Structure_1_1StVenantKirchhoff.html',1,'ExaDG::Structure']]],
+  ['stvenantkirchhoffdata_47',['StVenantKirchhoffData',['../structExaDG_1_1Structure_1_1StVenantKirchhoffData.html',1,'ExaDG::Structure']]]
 ];
