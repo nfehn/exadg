@@ -1,10 +1,6 @@
 var searchData=
 [
-  ['permutator_0',['Permutator',['../classdealspectrum_1_1Permutator.html#a09ac0bcb0a25a7e89afadcb1850b3233',1,'dealspectrum::Permutator']]],
-  ['print_5finfo_1',['print_info',['../classExaDG_1_1preCICE_1_1CouplingBase.html#ae48e393741201e6a56fed739f62e05b8',1,'ExaDG::preCICE::CouplingBase']]],
-  ['print_5fiterations_2',['print_iterations',['../classExaDG_1_1DeformedMappingBase.html#ac027384a50c0ee6ae287c223337e6707',1,'ExaDG::DeformedMappingBase::print_iterations()'],['../classExaDG_1_1Poisson_1_1DeformedMapping.html#a0a87e5a35e6053df407d3dd4f2895833',1,'ExaDG::Poisson::DeformedMapping::print_iterations()'],['../classExaDG_1_1Structure_1_1DeformedMapping.html#a65b7dee0698688151959d9b41c9af257',1,'ExaDG::Structure::DeformedMapping::print_iterations()']]],
-  ['print_5flevel_3',['print_level',['../classExaDG_1_1TimerTree.html#a9e3eba0d276e00bebf11fdccaad05307',1,'ExaDG::TimerTree']]],
-  ['print_5fplain_4',['print_plain',['../classExaDG_1_1TimerTree.html#a9c9e38cbf3d9e15226648be11dc6c9c9',1,'ExaDG::TimerTree']]],
-  ['printtimings_5',['printTimings',['../classdealspectrum_1_1DealSpectrumTimer.html#a679b686b7478ac7f65c3bafe70e64a52',1,'dealspectrum::DealSpectrumTimer']]],
-  ['process_5fcoupling_5fmesh_6',['process_coupling_mesh',['../classExaDG_1_1preCICE_1_1CouplingBase.html#a418651b2b8cf193b9e28a9ba839d2198',1,'ExaDG::preCICE::CouplingBase']]]
+  ['mappingdofvector_0',['MappingDoFVector',['../classExaDG_1_1MappingDoFVector.html#a0e945df21afeff8b5fb4aa37c7ed1ca3',1,'ExaDG::MappingDoFVector']]],
+  ['matrixfreedata_1',['MatrixFreeData',['../structExaDG_1_1MatrixFreeData.html#a31ec14ac4105a57596590fbac09046e7',1,'ExaDG::MatrixFreeData']]],
+  ['multigridmappings_2',['MultigridMappings',['../classExaDG_1_1MultigridMappings.html#a12caf180ce7d4acfb717bb7d3805ee41',1,'ExaDG::MultigridMappings::MultigridMappings(std::shared_ptr&lt; dealii::Mapping&lt; dim &gt; &gt; mapping, std::shared_ptr&lt; dealii::Mapping&lt; dim &gt; &gt; mapping_coarse_levels)'],['../classExaDG_1_1MultigridMappings.html#a3862742826dee41822efd2757b5582dc',1,'ExaDG::MultigridMappings::MultigridMappings(std::shared_ptr&lt; MappingDoFVector&lt; dim, Number &gt; &gt; mapping_dof_vector, unsigned int const degree_coarse_mappings)']]]
 ];
